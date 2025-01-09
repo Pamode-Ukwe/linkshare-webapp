@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+/** @type {import('tailwindcss').Config} */
 
 const config: Config = {
   content: [
@@ -8,13 +9,30 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+       colors: {
+        "dark-blue" : "#633CFF",
+        "purple" : "#BEADFF",
+        "light-purple" : "#EFEBFF",
+        "black" : "#333333",
+        "dark-grey" : "#737373",
+        "light-grey" : "#D9D9D9",
+        "milk" : "#FAFAF8",
+        "white" : "#FFFFFF",
+        "red" : "#FF3939",
+      },
+      fontFamily: {
+        instrumentsans: ["Instrument Sans", "sans-serif"]
       },
     },
+    screens: {
+      xs: "30rem",
+      sm: "48rem",
+      md: "58rem"
+    }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio')
+  ],
 };
 export default config;
+ 
