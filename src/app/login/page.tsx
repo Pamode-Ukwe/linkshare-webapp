@@ -76,7 +76,7 @@ export default function Home() {
             </div>
             <button type='submit' className='bg-dark-blue w-full p-3 rounded-lg text-light-purple my-3 hover:bg-purple'>Login</button>
           </form>  
-          <p onClick={() => setFormType('signup')} className='text-center'>Don't have an account? <Link href={`/signup`} className='text-dark-blue'>Create account</Link></p>              
+          <p onClick={() => setFormType('signup')} className='text-center'>Don&apos;t have an account? <Link href={`/signup`} className='text-dark-blue'>Create account</Link></p>              
           </div>
       </div>
     </div>    

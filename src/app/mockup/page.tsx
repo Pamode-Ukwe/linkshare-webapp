@@ -2,7 +2,7 @@ import Image from "next/image"
 import logo from '@/lincons/profile-details.png'
 import { useDummies } from "../store"
 
-const mockup = () => {
+const Mockup = () => {
     const { userData, displayIcons } = useDummies()
   return (
     <div className='md:table ml-6 col-span-1 hidden'>
@@ -25,4 +25,4 @@ const mockup = () => {
   )
 }
 
-export default mockup
+export default Mockup

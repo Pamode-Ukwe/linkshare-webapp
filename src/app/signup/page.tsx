@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation'
 
 const josefin =  Josefin_Sans({ weight: ['300', '400', '600'], subsets: ['latin']})
 
-const page = () => {
+const Page = () => {
   const { formData, errors, setFormData, setFormType, validateFields, resetFormData } = useLoginStore()
   const router  = useRouter()
 
@@ -50,7 +50,7 @@ const page = () => {
         <div className='bg-white m-3 p-6 rounded-md shadow-sm shadow-dark-grey'>
           <div className='my-8'>
             <p className='text-2xl font-bold my-3'>Create account</p>
-            <p className='text-dark-grey text-sm my-3'>Let's get you started sharing your links!</p>
+            <p className='text-dark-grey text-sm my-3'>Let&apos;s get you started sharing your links!</p>
           </div>
           <form  onSubmit ={handleSubmit}>
           <div className='items-center my-4 relative'>
@@ -91,4 +91,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

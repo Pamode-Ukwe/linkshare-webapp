@@ -7,7 +7,7 @@ import { useNavStore } from '../store'
 import SetUpPage from '../setuppage/page'
 import ProfilePage from '../profilepage/page'
 
-const page = () => {  
+const Page = () => {  
   const {top, switchTop} = useNavStore()
   return (
     <div className='bg-milk'>
@@ -30,4 +30,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

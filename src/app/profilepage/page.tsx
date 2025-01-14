@@ -6,7 +6,7 @@ import { useDummies } from "../store"
 import { useRef } from "react"
 import {Toaster, toast} from 'react-hot-toast'
 
-const page = () => {
+const Page = () => {
   const { userData, setProfileInput, setPicture } = useDummies()
   const inputRef = useRef<HTMLInputElement>(null)
   const handleImageClick = () => {
@@ -72,4 +72,4 @@ const page = () => {
   ) 
 }
   
-  export default page
+  export default Page

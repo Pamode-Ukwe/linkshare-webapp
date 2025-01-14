@@ -4,18 +4,20 @@ import React, { useState } from 'react'
 interface ValidEmailProps {
     value: string
     onChange: (value: string) => void
-    validate: (input: string) => string
+    validate?: (input: string) => string
 }
 
-const page = ({value,   onChange, validate}: ValidEmailProps) => {
+const Page = ({value, onChange, validate}: ValidEmailProps) => {
     const [error, setError] = useState('')
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const inputValue = event.target.value
+        const inputValue = event.target.value.toString()
         onChange(inputValue)
         
-        const validationError = validate(inputValue)
-        setError(validationError)
+        if (validate) {
+          const validationError = validate(inputValue);
+          setError(validationError);
+      }
     }
   return (
     <div className='space-y-2'>
@@ -25,4 +27,4 @@ const page = ({value,   onChange, validate}: ValidEmailProps) => {
   )
 }
 
-export default page
+export default Page

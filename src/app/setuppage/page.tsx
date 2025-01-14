@@ -17,7 +17,7 @@ import { useEffect } from 'react'
 import {Toaster, toast} from 'react-hot-toast'
 
 
-const page = () => {
+const Page = () => {
   const { addIcon, removeIcon, updateIcons, iconsSwitch, userData, setLink } = useDummies()
   const {activeDropdownId, switchActiveDropdownId, selectedPlatform, setSelectedPlatform} = useDropStore()
   const optionStyle = 'hover:cursor-pointer hover:bg-light-purple p-1 flex gap-2 border-t-2 text-sm'
@@ -93,5 +93,5 @@ const page = () => {
     ) 
   }
   
-  export default page
+  export default Page
   

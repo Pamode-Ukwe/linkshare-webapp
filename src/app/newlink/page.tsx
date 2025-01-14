@@ -4,7 +4,7 @@ import { useDummies, useGeneralStore } from "../store"
 import logo from "@/lincons/profile-details.png"
 import {Toaster, toast} from 'react-hot-toast'
 
-const page = () => {  
+const Page = () => {  
   const {userData} = useDummies()
   const {setCopied} = useGeneralStore()
   const handleCopyLink = async () => {
@@ -12,7 +12,7 @@ const page = () => {
       const currentUrl = window.location.href
       await navigator.clipboard.writeText(currentUrl)
       setCopied(0)
-      toast('✔')
+      toast('Copied ✔')
     } catch (err) {
       toast('Failed to copy link')
     }
@@ -54,4 +54,4 @@ const page = () => {
     )
   }
   
-  export default page
+  export default Page
